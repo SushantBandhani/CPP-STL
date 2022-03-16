@@ -101,5 +101,20 @@ if(!bt7.any()){
 //converting decimal number tobinary using bitset
 
 int num=99;
-cout<<"num 99 in bits form is : "<<bitset<8>(num);
+cout<<"num 99 in bits form is : "<<bitset<8>(num)<<"\n";
+
+//We can also perform logivcal operations in bitset
+cout<<(bt==bt2)<<"\n";
+cout<<(bt^bt2)<<"\n";  //size of bt and bt2 is same
+cout<<(bt3^bt4)<<"\n";
+// cout<<(bt==bt4);  // there sizes are different so cant be compparable like this
+
+
+//we can also perform right and left shift operator in bitset
+
+bt2<<=2;// shift the bits in bt2 by left 
+cout<<"bt2 after performing left shift : "<<bt2<<"\n";
+bt2>>=1; //shift the bits in bt2 in right by 1
+cout<<"bt2 after performing right shift is : "<<bt2<<"\n";
+
 }
