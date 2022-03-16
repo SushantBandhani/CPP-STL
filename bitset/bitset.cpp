@@ -98,16 +98,16 @@ if(!bt7.any()){
     cout<<"It has no set bits ";
 }
 
-//converting decimal number tobinary using bitset
+//converting decimal number to binary using bitset
 
 int num=99;
 cout<<"num 99 in bits form is : "<<bitset<8>(num)<<"\n";
 
-//We can also perform logivcal operations in bitset
+//We can also perform logical operations in bitset
 cout<<(bt==bt2)<<"\n";
 cout<<(bt^bt2)<<"\n";  //size of bt and bt2 is same
 cout<<(bt3^bt4)<<"\n";
-// cout<<(bt==bt4);  // there sizes are different so cant be compparable like this
+// cout<<(bt==bt4);  // there sizes are different so cant be comparable like this
 
 
 //we can also perform right and left shift operator in bitset
