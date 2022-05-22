@@ -1,7 +1,6 @@
 // #include<iostream>
 #include<bits/stdc++.h>
 
-#include<map>
 using namespace std;
 int main()
 {
@@ -18,6 +17,10 @@ int main()
     mpp.emplace("raj",45);
     mpp.emplace("kaku",1);
     mpp["Manas"]=1;         //if duplicate keys are their then it will overwrite the above key..the value of key(manas) will be overwrite as 1
+    mpp.insert({"harry",2});   // mpp.insert("harry",2) wont work
+    mpp.insert(pair<string,int>("louis",9));
+
+cout<<mpp.begin()->first<<"  "<<mpp.begin()->second<<endl<<endl;  // works fine
 
 
     for(auto it:mpp){
@@ -109,6 +112,11 @@ map<string,array<int,5>>mpp4;
 // mpp4.emplace("sushant",{6,7,8,9,10});
 // mpp4.emplace("shivam",{11,12,13,14,15});
 
+// to insert or emplace you have to do this like
+//The below ones will works fine
+//mpp4.insert({"hello",{1,2,3,4,5}});
+// mpp4.emplace(pair<string,array<int,5>>("kaku",{1,2,3,4,5})); 
+
 mpp4["kaku"]={1,2,3,4,5};  //working fine
 mpp4["shivam"]={6,7,8,9,10};
 mpp4["sushant"]={11,12,13,14,15};
@@ -160,10 +168,11 @@ cout<<"\n\n\n";
 //*******multimap*******
 //in multimap it store the element in sorted order and one keyvalue can have different map values here
 multimap<string,int>mulmpp;
+
+// **  [] operator not works in case of multimap
+
 // mulmpp["Raj"]=1;
-// mulmpp["Raj"]=2;
-// mulmpp["Zayn"]=3;
-// mulmpp["Siddharth"]=1;
+
 mulmpp.emplace("Raj",1);
 mulmpp.emplace("Raj",1);
 
